@@ -1,0 +1,28 @@
+{
+  "name": "sparse/competence-campus",
+  "description": "Competence-based Education tool",
+  "type": "application",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Raymond Jelierse",
+      "email": "info@raymondjelierse.nl"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "symfony/symfony": "^2.6",
+    "doctrine/mongodb-odm": "1.0.*@dev",
+    "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+    "jms/serializer-bundle": "^0.13.0",
+    "friendsofsymfony/rest-bundle": "^1.5",
+    "sensio/framework-extra-bundle": "^3.0",
+    "jms/security-extra-bundle": "^1.5"
+  },
+  "require-dev": {
+    "doctrine/doctrine-fixtures-bundle": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {"Sparse\\": "src/"}
+  }
+}

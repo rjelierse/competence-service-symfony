@@ -1,0 +1,21 @@
+<div layout="row" flex>
+    <md-list flex="33">
+        <md-list-item class="md-2-line" ng-repeat="template in templates track by template.id">
+            <md-button class="md-no-style" ui-sref="profileTemplate({id: template.id})">
+                <div class="md-list-item-inner">
+                    <div class="md-list-item-text">
+                        <h3>{{ ::template.name }}</h3>
+
+                        <p>Competences: {{ ::template.competences.length }}, extra points: {{ ::template.extra_points }}</p>
+                    </div>
+                </div>
+            </md-button>
+        </md-list-item>
+    </md-list>
+    
+    <ui-view name="template" flex></ui-view>
+</div>
+
+<md-button class="md-fab md-fab-bottom-right" ui-sref="profileTemplates.new">
+    +
+</md-button>

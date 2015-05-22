@@ -1,0 +1,11 @@
+imports:
+  - { resource: doctrine_mongodb.yml }
+  - { resource: fos_rest.yml }
+  - { resource: framework.yml }
+  - { resource: security.yml }
+  - { resource: sensio_framework_extra.yml }
+  - { resource: twig.yml }
+
+parameters:
+    locale: en
+    database.name: competence_campus

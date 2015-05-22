@@ -1,0 +1,9 @@
+node_modules
+composer.phar
+vendor
+web/bundles
+web/scripts
+web/styles
+bin/browserify
+bin/composer
+var

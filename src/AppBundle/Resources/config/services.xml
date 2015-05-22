@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <!-- MongoDB parameter converter -->
+        <service id="sparse.converter.doctrine.odm.mongodb" class="%sensio_framework_extra.converter.doctrine.class%">
+            <tag name="request.param_converter" converter="doctrine.odm.mongodb" />
+            <argument type="service" id="doctrine_mongodb" />
+        </service>
+        
+        <!-- MongoDB serializer object constructor -->
+        <service id="jms_serializer.doctrine_mongodb_object_constructor" class="%jms_serializer.doctrine_object_constructor.class%" public="false">
+            <argument type="service" id="doctrine_mongodb" />
+            <argument type="service" id="jms_serializer.unserialize_object_constructor"/>
+        </service>
+        
+        <service id="jms_serializer.object_constructor" alias="jms_serializer.doctrine_mongodb_object_constructor" public="false"/>
+    </services>
+</container>

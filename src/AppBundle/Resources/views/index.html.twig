@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+  <title>CompetenceCampus</title>
+  <link rel="stylesheet" type="text/css" href="styles/angular-csp.css">
+  <link rel="stylesheet" type="text/css" href="styles/angular-material.css">
+</head>
+<body ng-app="app" layout="row">
+  <md-sidenav layout="column" md-is-locked-open="$mdMedia('gt-sm')">
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <a ui-sref="home" flex>CompetenceCampus</a>
+      </div>
+    </md-toolbar>
+    <md-list flex>
+      <page-menu></page-menu>
+    </md-list>
+  </md-sidenav>
+  
+  <ui-view name="content" flex></ui-view>
+  
+  <script src="scripts/app.js"></script>
+</body>
+</html>

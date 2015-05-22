@@ -1,0 +1,22 @@
+fos_rest:
+  service:
+    serializer: jms_serializer
+    exception_handler: fos_rest.view.exception_wrapper_handler
+  allowed_methods_listener: true
+  body_converter:
+    enabled: true
+    validate: false
+  exception:
+    enabled: true
+    codes:
+      'JMS\Serializer\Exception\ValidationFailedException': HTTP_BAD_REQUEST
+  format_listener:
+    rules:
+      - { path: ^/, priorities: ['json', 'html'], fallback_format: json, prefer_extension: false }
+    media_type:
+      version_regex: '/(v|version)=(?P<version>[0-9\.]+)/'
+  view:
+    formats:
+      json: true
+      rss: false
+      xml: false

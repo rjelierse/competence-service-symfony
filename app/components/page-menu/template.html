@@ -1,0 +1,11 @@
+<md-list-item class="md-2-line" ng-repeat="page in ::pages">
+    <md-button class="md-no-style" ui-sref="{{ ::page.name }}">
+        <div class="md-list-item-inner">
+            <div class="md-list-item-text">
+                <h3>{{ ::page.label }}</h3>
+
+                <p>{{ ::page.description }}</p>
+            </div>
+        </div>
+    </md-button>
+</md-list-item>

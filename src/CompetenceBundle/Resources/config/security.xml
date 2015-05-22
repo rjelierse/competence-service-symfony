@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    
+    <services>
+        <service id="competence.access.voter.user" class="Sparse\CompetenceBundle\Security\Core\Authorization\Voter\UserVoter">
+            <tag name="security.voter" />
+        </service>
+        
+        <service id="competence.access.voter.competence_profile" class="Sparse\CompetenceBundle\Security\Core\Authorization\Voter\CompetenceProfileVoter">
+            <tag name="security.voter" />
+        </service>
+    </services>
+</container>

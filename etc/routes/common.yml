@@ -1,0 +1,7 @@
+app:
+  type: annotation
+  resource: @AppBundle/Controller
+
+competence:
+  type: annotation
+  resource: @CompetenceBundle/Controller

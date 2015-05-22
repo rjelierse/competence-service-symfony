@@ -1,0 +1,28 @@
+<md-card>
+    <md-card-content>
+        <h2 class="md-title">{{ ::template.name }}</h2>
+        <md-tabs md-dynamic-height>
+            <md-tab label="Competences">
+                <md-list>
+                    <md-list-item class="md-2-line" ng-repeat="competence in template.competences">
+                        <div class="md-list-item-text">
+                            <h3>{{ competence.name }}</h3>
+
+                            <p>Required points: {{ competence.points}}</p>
+                        </div>
+                    </md-list-item>
+                    <md-list-item class="md-2-line">
+                        <div class="md-list-item-text">
+                            <h3>Passion</h3>
+
+                            <p>Available points: {{ template.extra_points }}</p>
+                        </div>
+                    </md-list-item>
+                </md-list>
+            </md-tab>
+            <md-tab label="Settings">
+                
+            </md-tab>
+        </md-tabs>
+    </md-card-content>
+</md-card>
